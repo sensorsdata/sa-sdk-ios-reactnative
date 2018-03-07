@@ -58,3 +58,19 @@ SensorsAnalyticsEventTypeAppClick];
 1、对于直接集成源代码的开发者，可以在编译选项 Preprocessor Macros 中定义选项 SENSORS_ANALYTICS_REACT_NATIVE=1 开启。
 
 2、对于使用 Cocoapods 集成 Sensors Analytics SDK 的开发者，推荐使用 pod 'SensorsAnalyticsSDK', :subspecs => ['ENABLE_REACT_NATIVE_APPCLICK'] 集成方式开启，或者修改 Pod 中 `SensorsAnalyticsSDK` 项目的编译选项。
+
+## License
+
+Copyright 2015－2017 Sensors Data Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
