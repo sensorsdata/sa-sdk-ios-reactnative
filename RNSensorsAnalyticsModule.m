@@ -325,4 +325,22 @@ RCT_EXPORT_METHOD(deleteUser){
     NSLog(@"[RNSensorsAnalytics] error:%@",exception);
   }
 }
+
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getDistinctId){
+    @try {
+        NSString *bestId = [SensorsAnalyticsSDK sharedInstance].loginId;
+        if (bestId == nil) {
+            bestId = [SensorsAnalyticsSDK sharedInstance].distinctId;
+        }
+        if (bestId == nil) {
+            [[SensorsAnalyticsSDK sharedInstance] resetAnonymousId];
+            bestId = [SensorsAnalyticsSDK sharedInstance].anonymousId;
+        }
+        return bestId;
+    } @catch (NSException *exception) {
+        NSLog(@"[RNSensorsAnalytics] error:%@",exception);
+        return nil;
+    }
+    return nil;
+}
 @end
