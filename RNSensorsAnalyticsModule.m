@@ -319,4 +319,20 @@ RCT_EXPORT_METHOD(deleteUser){
     NSLog(@"[RNSensorsAnalytics] error:%@",exception);
   }
 }
+RCT_EXPORT_METHOD(loginId){
+    @try {
+        return  [[SensorsAnalyticsSDK sharedInstance]loginId];
+    } @catch (NSException *exception) {
+        NSLog(@"[RNSensorsAnalytics] error:%@",exception);
+        return nil;
+    }
+}
+RCT_EXPORT_METHOD(distinctId){
+    @try {
+        return  [[SensorsAnalyticsSDK sharedInstance]distinctId];
+    } @catch (NSException *exception) {
+        NSLog(@"[RNSensorsAnalytics] error:%@",exception);
+        return nil;
+    }
+}
 @end
